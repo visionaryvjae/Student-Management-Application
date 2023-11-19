@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-19T19:27:27.906Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="PLYs5dFEYS7VwRgh-WjG" version="21.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-19T19:29:11.143Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="tRJbyu0FdooBC9svfBTV" version="21.7.4" type="github">
   <diagram name="Page-1" id="9B8nMwytWe3xk5px9rpZ">
     <mxGraphModel dx="1434" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,16 +10,14 @@
         <mxCell id="XAU_QhJ1LdmKM9mRQYPz-2" value="&lt;b&gt;Students_tbl&lt;/b&gt;&lt;br&gt;__________________&lt;br&gt;-&lt;b&gt;student number (PK)&lt;/b&gt;&lt;br&gt;-student Name&lt;br&gt;-student image&lt;br&gt;-Date of Birth&lt;br&gt;-Gender&lt;br&gt;-Phone&lt;br&gt;-Address&lt;br&gt;-&lt;b&gt;Module Code (FK)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="100" y="180" width="140" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="XAU_QhJ1LdmKM9mRQYPz-5" style="edgeStyle=entityRelationEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.979;entryY=0.944;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#cce5ff;strokeColor=#36393d;" edge="1" parent="1" source="XAU_QhJ1LdmKM9mRQYPz-3" target="XAU_QhJ1LdmKM9mRQYPz-2">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="290" y="400" />
-              <mxPoint x="260" y="331" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="XAU_QhJ1LdmKM9mRQYPz-3" value="&lt;b&gt;Modules_tbl&lt;/b&gt;&lt;br&gt;__________________&lt;br&gt;&lt;br&gt;-&lt;b&gt;Module Code (PK)&lt;/b&gt;&lt;br&gt;-Module Name&lt;br&gt;-Module Description&lt;br&gt;-Online resources" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="320" width="140" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="XAU_QhJ1LdmKM9mRQYPz-6" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="XAU_QhJ1LdmKM9mRQYPz-2" target="XAU_QhJ1LdmKM9mRQYPz-3">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="240" y="280" as="sourcePoint" />
+            <mxPoint x="340" y="180" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
