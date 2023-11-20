@@ -29,7 +29,7 @@ namespace Student_Mangement_Application.Presentation_Layer
 
         private void label3_Click(object sender, EventArgs e)
         {
-            LoginRegister_btn.Text = "Login";
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -43,5 +43,35 @@ namespace Student_Mangement_Application.Presentation_Layer
         {
 
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dh.Search(txtSearch.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoginFrm login = new LoginFrm();
+            this.Close();
+            login.Show();
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            dh.Create(new Students(txtStudentNum.Text, txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text));
+            dataGridView1.DataSource = dh.getData().Tables[0];
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            dh.Update(new Students(txtStudentNum.Text, txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text));
+            dataGridView1.DataSource = dh.getData().Tables[0];
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            dh.Delete(dataGridView1.CurrentCell.ToString());
+            dataGridView1.DataSource = dh.getData().Tables[0];
+        }
     }
 }

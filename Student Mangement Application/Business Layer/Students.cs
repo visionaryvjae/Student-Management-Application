@@ -24,10 +24,11 @@ namespace Student_Mangement_Application.Presentation_Layer
             this.password = password;
         }
 
-        public Students(string studentNumber, string studentName, string studentIMG, DateTime dOB, string phone, string address) : this(studentNumber, studentName)
+        public Students(string studentNumber, string studentName, string studentIMG, DateTime dOB, string gender, string phone, string address) : this(studentNumber, studentName)
         {
             StudentIMG = studentIMG;
             DOB = dOB;
+            Gender = gender;
             Phone = phone;
             Address = address;
         }

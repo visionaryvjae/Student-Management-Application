@@ -34,6 +34,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.birthDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -42,7 +43,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,6 +74,7 @@
             this.btnInsert.TabIndex = 11;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
@@ -83,6 +84,7 @@
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -92,6 +94,7 @@
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button4
             // 
@@ -101,9 +104,11 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "Back to Login";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.birthDatePicker);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cmbGender);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -112,7 +117,6 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtDOB);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtImage);
             this.groupBox1.Controls.Add(this.label3);
@@ -120,12 +124,21 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtStudentNum);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(106, 372);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1009, 189);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insert Information";
+            // 
+            // birthDatePicker
+            // 
+            this.birthDatePicker.Location = new System.Drawing.Point(517, 82);
+            this.birthDatePicker.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.birthDatePicker.Name = "birthDatePicker";
+            this.birthDatePicker.Size = new System.Drawing.Size(200, 23);
+            this.birthDatePicker.TabIndex = 38;
             // 
             // label8
             // 
@@ -196,13 +209,6 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Address";
             // 
-            // txtDOB
-            // 
-            this.txtDOB.Location = new System.Drawing.Point(517, 85);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(159, 23);
-            this.txtDOB.TabIndex = 29;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -262,19 +268,20 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(44, 102);
+            this.txtSearch.Location = new System.Drawing.Point(52, 60);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(169, 23);
             this.txtSearch.TabIndex = 38;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(59, 131);
+            this.btnSearch.Location = new System.Drawing.Point(67, 89);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(134, 25);
             this.btnSearch.TabIndex = 39;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ApplicationFrm
             // 
@@ -316,7 +323,6 @@
         private Label label6;
         private TextBox txtAddress;
         private Label label5;
-        private TextBox txtDOB;
         private Label label4;
         private TextBox txtImage;
         private Label label3;
@@ -326,5 +332,6 @@
         private Label label1;
         private TextBox txtSearch;
         private Button btnSearch;
+        private DateTimePicker birthDatePicker;
     }
 }

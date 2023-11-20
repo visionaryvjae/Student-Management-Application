@@ -24,7 +24,7 @@ namespace Student_Mangement_Application.Data_Layer
             return list;
         }
 
-        public void checkIfValidUser(string user, string pass, List<Students> StudentsList)
+        public Boolean checkIfValidUser(string user, string pass, List<Students> StudentsList)
         {
             bool isValid = false;
             foreach (Students student in StudentsList)
@@ -44,6 +44,8 @@ namespace Student_Mangement_Application.Data_Layer
             {
                 MessageBox.Show("Invalid Username or Password!", "Information", MessageBoxButtons.OK);
             }
+
+            return isValid;
         }
     }
 }
