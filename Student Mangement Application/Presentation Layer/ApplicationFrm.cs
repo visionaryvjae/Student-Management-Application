@@ -33,5 +33,15 @@ namespace Student_Mangement_Application.Presentation_Layer
         {
             dataGridView1.DataSource = dh.getData().Tables[0];
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

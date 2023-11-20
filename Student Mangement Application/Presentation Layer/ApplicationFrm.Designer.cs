@@ -29,194 +29,272 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDOB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtImage = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNameSurname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtStudentNum = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(404, 56);
+            this.dataGridView1.Location = new System.Drawing.Point(260, 29);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 310);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label1
+            // btnInsert
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Student Number";
+            this.btnInsert.Location = new System.Drawing.Point(294, 584);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(134, 44);
+            this.btnInsert.TabIndex = 11;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // btnUpdate
             // 
-            this.textBox1.Location = new System.Drawing.Point(196, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 23);
-            this.textBox1.TabIndex = 2;
+            this.btnUpdate.Location = new System.Drawing.Point(554, 584);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(133, 44);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // btnDelete
             // 
-            this.textBox2.Location = new System.Drawing.Point(196, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 23);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Student Name and Surname";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(196, 183);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 23);
-            this.textBox3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(82, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Student Image";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(196, 229);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 23);
-            this.textBox4.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Date of Birth";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(196, 274);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 23);
-            this.textBox5.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 277);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 15);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Address";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(49, 423);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 33);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(198, 423);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 33);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(340, 423);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 33);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(788, 584);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(145, 44);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(991, 443);
+            this.button4.Location = new System.Drawing.Point(1057, 613);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(119, 33);
             this.button4.TabIndex = 14;
             this.button4.Text = "Back to Login";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // groupBox1
             // 
-            this.textBox6.Location = new System.Drawing.Point(196, 322);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(159, 23);
-            this.textBox6.TabIndex = 16;
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.cmbGender);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtPhone);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtAddress);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtDOB);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtImage);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtNameSurname);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtStudentNum);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(106, 372);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1009, 189);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Insert Information";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(98, 126);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 15);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Gender";
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.cmbGender.Location = new System.Drawing.Point(201, 123);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(121, 23);
+            this.cmbGender.TabIndex = 36;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(517, 128);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 35;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(834, 42);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(159, 23);
+            this.txtPhone.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(755, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 15);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Phone";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(87, 325);
+            this.label6.Location = new System.Drawing.Point(408, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 15);
-            this.label6.TabIndex = 15;
+            this.label6.TabIndex = 32;
             this.label6.Text = "Module Code";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(834, 80);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(159, 23);
+            this.txtAddress.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(755, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 15);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Address";
+            // 
+            // txtDOB
+            // 
+            this.txtDOB.Location = new System.Drawing.Point(517, 85);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(159, 23);
+            this.txtDOB.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(414, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 15);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Date of Birth";
+            // 
+            // txtImage
+            // 
+            this.txtImage.Location = new System.Drawing.Point(517, 39);
+            this.txtImage.Name = "txtImage";
+            this.txtImage.Size = new System.Drawing.Size(159, 23);
+            this.txtImage.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(403, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Student Image";
+            // 
+            // txtNameSurname
+            // 
+            this.txtNameSurname.Location = new System.Drawing.Point(201, 80);
+            this.txtNameSurname.Name = "txtNameSurname";
+            this.txtNameSurname.Size = new System.Drawing.Size(159, 23);
+            this.txtNameSurname.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 15);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Student Name and Surname";
+            // 
+            // txtStudentNum
+            // 
+            this.txtStudentNum.Location = new System.Drawing.Point(201, 37);
+            this.txtStudentNum.Name = "txtStudentNum";
+            this.txtStudentNum.Size = new System.Drawing.Size(159, 23);
+            this.txtStudentNum.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 15);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Student Number";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(44, 102);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(169, 23);
+            this.txtSearch.TabIndex = 38;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(59, 131);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(134, 25);
+            this.btnSearch.TabIndex = 39;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // ApplicationFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 488);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1188, 658);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ApplicationFrm";
             this.Text = "ApplicationFrm";
             this.Load += new System.EventHandler(this.ApplicationFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,21 +303,28 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label2;
-        private TextBox textBox3;
-        private Label label3;
-        private TextBox textBox4;
-        private Label label4;
-        private TextBox textBox5;
-        private Label label5;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnInsert;
+        private Button btnUpdate;
+        private Button btnDelete;
         private Button button4;
-        private TextBox textBox6;
+        private GroupBox groupBox1;
+        private Label label8;
+        private ComboBox cmbGender;
+        private ComboBox comboBox1;
+        private TextBox txtPhone;
+        private Label label7;
         private Label label6;
+        private TextBox txtAddress;
+        private Label label5;
+        private TextBox txtDOB;
+        private Label label4;
+        private TextBox txtImage;
+        private Label label3;
+        private TextBox txtNameSurname;
+        private Label label2;
+        private TextBox txtStudentNum;
+        private Label label1;
+        private TextBox txtSearch;
+        private Button btnSearch;
     }
 }

@@ -26,5 +26,22 @@ namespace Student_Mangement_Application.Presentation_Layer
             string password = txtPassword.Text;
             fHandler.checkIfValidUser(username, password, fHandler.format());
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            LoginRegister_btn.Text = "Login";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            FileStore fs = new FileStore();
+            List<Students> list = fHandler.format();
+            list.Add(new Students(username, password));
+
+            fs.WriteToFile(list);
+        }
     }
 }
