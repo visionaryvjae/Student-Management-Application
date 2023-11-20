@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-11-20T09:20:46.895Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="PQFXuaR--k-5o5zcaGCn" version="22.1.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-11-20T09:21:14.467Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="zxah9fmkIlgbnNwTWwRT" version="22.1.3" type="github" pages="2">
   <diagram name="Page-1" id="9B8nMwytWe3xk5px9rpZ">
     <mxGraphModel dx="1687" dy="986" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="XAU_QhJ1LdmKM9mRQYPz-1" value="&lt;h1&gt;&lt;u&gt;Database tables&lt;/u&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="300" y="50" width="250" height="120" as="geometry" />
+          <mxGeometry x="300" y="50" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="XAU_QhJ1LdmKM9mRQYPz-2" value="&lt;b&gt;Students_tbl&lt;/b&gt;&lt;br&gt;__________________&lt;br&gt;-&lt;b&gt;student number (PK)&lt;/b&gt;&lt;br&gt;-student Name&lt;br&gt;-student image&lt;br&gt;-Date of Birth&lt;br&gt;-Gender&lt;br&gt;-Phone&lt;br&gt;-Address&lt;br&gt;-&lt;b&gt;Module Code (FK)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;gradientDirection=north;" parent="1" vertex="1">
           <mxGeometry x="100" y="180" width="140" height="160" as="geometry" />
