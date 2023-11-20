@@ -14,6 +14,7 @@ namespace Student_Mangement_Application.Presentation_Layer
         public string StudentName { get; set; }
         public string StudentIMG { get; set; }
         public DateTime DOB { get; set; }
+        public string Gender { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
 
