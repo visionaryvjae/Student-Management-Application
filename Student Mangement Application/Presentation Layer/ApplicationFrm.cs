@@ -49,6 +49,7 @@ namespace Student_Mangement_Application.Presentation_Layer
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = dh.Search(txtSearch.Text);
+            btnReset.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -75,8 +76,15 @@ namespace Student_Mangement_Application.Presentation_Layer
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            dh.Delete(dataGridView1.CurrentCell.ToString());
+            string Studentno = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            dh.Delete(Studentno);
             dataGridView1.DataSource = dh.getData().Tables[0];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dh.getData().Tables[0];
+            btnReset.Enabled = false;
         }
     }
 }

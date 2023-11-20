@@ -38,9 +38,10 @@ namespace Student_Mangement_Application.Business_Layer
 
         public void Delete(string StudentNumber)
         {
-            string query = "DELETE * from Students WHERE StudentNumber = '"+StudentNumber+ "'";
+            string query = "DELETE from Students WHERE StudentNumber = '"+StudentNumber+ "'";
             SqlConnection connection = new SqlConnection(conn);
             SqlCommand comm = new SqlCommand(query, connection);
+            connection.Open();
             int n = comm.ExecuteNonQuery();
 
             MessageBox.Show($"Successfully deleted {n} row(s)!", "information", MessageBoxButtons.OKCancel);
