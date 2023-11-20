@@ -66,7 +66,10 @@ namespace Student_Mangement_Application.Presentation_Layer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            dh.Update(new Students(txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text, cmbModuleCodes.Text));
+            string Studentno = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            Students students = new Students();
+            students.StudentNumber = Studentno;
+            dh.Update(new Students(txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text, cmbModuleCodes.Text), Studentno);
             dataGridView1.DataSource = dh.getData().Tables[0];
         }
 

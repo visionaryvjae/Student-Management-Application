@@ -35,5 +35,10 @@ namespace Student_Mangement_Application.Presentation_Layer
             Address = address;
             ModuleCode = moduleCode;
         }
+
+        public Students()
+        {
+
+        }
     }
 }

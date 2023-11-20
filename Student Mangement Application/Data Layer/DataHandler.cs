@@ -43,19 +43,19 @@ namespace Student_Mangement_Application.Business_Layer
             SqlCommand comm = new SqlCommand(query, connection);
             int n = comm.ExecuteNonQuery();
 
-            MessageBox.Show($"{n} row(s) changed!", "information", MessageBoxButtons.OKCancel);
+            MessageBox.Show($"Successfully deleted {n} row(s)!", "information", MessageBoxButtons.OKCancel);
             connection.Close();
         }
 
-        public void Update(Students student)
+        public void Update(Students student, string StudentNum)
         {
-            string query = $"UPDATE Students SET StudentNumber = StudentName = '{student.StudentName}', StudentImage = '{student.StudentIMG}', DateOfBirth = '{student.DOB}', Gender = '{student.Gender}', Phone = '{student.Phone}', Address = '{student.Address}, ModuleCode = {student.ModuleCode}' WHERE StudentNumber = '{student.StudentNumber}'";
+            string query = $"UPDATE Students SET StudentName = '{student.StudentName}', StudentImage = '{student.StudentIMG}', DateOfBirth = '{student.DOB}', Gender = '{student.Gender}', Phone = '{student.Phone}', Address = '{student.Address}, ModuleCode = {student.ModuleCode}' WHERE StudentNumber = '{StudentNum}'";
             SqlConnection connection = new SqlConnection(conn);
             connection.Open();
             SqlCommand comm = new SqlCommand(query, connection);
             int n = comm.ExecuteNonQuery();
 
-            MessageBox.Show($"{n} update(s) made!", "information", MessageBoxButtons.OKCancel);
+            MessageBox.Show($"Updated successfully!", "information", MessageBoxButtons.OKCancel);
             connection.Close();
         }
 
