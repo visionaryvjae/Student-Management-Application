@@ -28,7 +28,7 @@ namespace Student_Mangement_Application.Business_Layer
 
         public DataTable Search(string searcVal)
         {
-            string query = "SELECT * from Students WHERE StudentName LIKE '" +searcVal+ "'";
+            string query = "SELECT * from Students WHERE StudentName LIKE '%" +searcVal+ "%'";
 
             SqlDataAdapter da = new SqlDataAdapter(query, conn);
             DataTable dt = new DataTable();
@@ -39,20 +39,46 @@ namespace Student_Mangement_Application.Business_Layer
         public void Delete(string StudentNumber)
         {
             string query = "DELETE * from Students WHERE StudentNumber = '"+StudentNumber+ "'";
-            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            SqlConnection connection = new SqlConnection(conn);
+            SqlCommand comm = new SqlCommand(query, connection);
+            int n = comm.ExecuteNonQuery();
+
+            MessageBox.Show($"{n} row(s) changed!", "information", MessageBoxButtons.OKCancel);
+            connection.Close();
         }
 
         public void Update(Students student)
         {
-            string query = $"UPDATE Students SET StudentNumber = '{student.StudentNumber}', StudentName = '{student.StudentName}', StudentImage = '{student.StudentIMG}', DateOfBirth = '{student.DOB}', Gender = '{student.Gender}', Phone = '{student.Phone}', Address = '{student.Address}' WHERE StudentName = '{student.StudentNumber}'";
-            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            string query = $"UPDATE Students SET StudentNumber = StudentName = '{student.StudentName}', StudentImage = '{student.StudentIMG}', DateOfBirth = '{student.DOB}', Gender = '{student.Gender}', Phone = '{student.Phone}', Address = '{student.Address}, ModuleCode = {student.ModuleCode}' WHERE StudentNumber = '{student.StudentNumber}'";
+            SqlConnection connection = new SqlConnection(conn);
+            connection.Open();
+            SqlCommand comm = new SqlCommand(query, connection);
+            int n = comm.ExecuteNonQuery();
+
+            MessageBox.Show($"{n} update(s) made!", "information", MessageBoxButtons.OKCancel);
+            connection.Close();
         }
 
         public void Create(Students student)
         {
-            string query = $"INSERT INTO Students (StudentNumber, StudentName, StudentImage, DateOfBirth, Gender, Phone, Address) " +
-                $"VALUES ('{student.StudentNumber}', '{student.StudentName}', '{student.StudentIMG}', '{student.DOB}', '{student.Gender}', '{student.Phone}', '{student.Address}')";
+            //(StudentName, StudentImage, DateOfBirth, Gender, Phone, Address, ModuleCode)
+            string query = $"INSERT INTO Students VALUES ('{student.StudentName}', '{student.StudentIMG}', '{student.DOB}', '{student.Gender}', '{student.Phone}', '{student.Address}', '{student.ModuleCode}')";
+            SqlConnection connection = new SqlConnection(conn);
+            connection.Open();
+            SqlCommand comm = new SqlCommand(query, connection);
+            int n = comm.ExecuteNonQuery();
+            
+            MessageBox.Show($"{n} row(s) affected", "information", MessageBoxButtons.OKCancel);
+            connection.Close();
+        }
+
+        public DataTable getModuleNum()
+        {
+            string query = "SELECT ModuleCode from Modules";
             SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
     }
 }

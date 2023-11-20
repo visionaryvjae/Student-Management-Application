@@ -17,6 +17,8 @@ namespace Student_Mangement_Application.Presentation_Layer
         public ApplicationFrm()
         {
             InitializeComponent();
+            dataGridView1.DataSource = dh.getData().Tables[0];
+            //cmbModuleCodes.DataSource = dh.getModuleNum().ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,7 +33,7 @@ namespace Student_Mangement_Application.Presentation_Layer
 
         private void ApplicationFrm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dh.getData().Tables[0];
+            
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace Student_Mangement_Application.Presentation_Layer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dh.Search(txtSearch.Text);
+            dataGridView1.DataSource = dh.Search(txtSearch.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -58,13 +60,13 @@ namespace Student_Mangement_Application.Presentation_Layer
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            dh.Create(new Students(txtStudentNum.Text, txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text));
+            dh.Create(new Students(txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text, cmbModuleCodes.Text));
             dataGridView1.DataSource = dh.getData().Tables[0];
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            dh.Update(new Students(txtStudentNum.Text, txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text));
+            dh.Update(new Students(txtNameSurname.Text, txtImage.Text, birthDatePicker.Value, cmbGender.Text, txtPhone.Text, txtAddress.Text, cmbModuleCodes.Text));
             dataGridView1.DataSource = dh.getData().Tables[0];
         }
 

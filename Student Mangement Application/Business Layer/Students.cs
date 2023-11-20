@@ -17,6 +17,7 @@ namespace Student_Mangement_Application.Presentation_Layer
         public string Gender { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
+        public string ModuleCode { get; set; }
 
         public Students(string username, string password)
         {
@@ -24,13 +25,15 @@ namespace Student_Mangement_Application.Presentation_Layer
             this.password = password;
         }
 
-        public Students(string studentNumber, string studentName, string studentIMG, DateTime dOB, string gender, string phone, string address) : this(studentNumber, studentName)
+        public Students(string studentName, string studentIMG, DateTime dOB, string gender, string phone, string address, string moduleCode)
         {
+            StudentName = studentName;
             StudentIMG = studentIMG;
             DOB = dOB;
             Gender = gender;
             Phone = phone;
             Address = address;
+            ModuleCode = moduleCode;
         }
     }
 }

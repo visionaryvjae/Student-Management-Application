@@ -24,7 +24,11 @@ namespace Student_Mangement_Application.Presentation_Layer
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            fHandler.checkIfValidUser(username, password, fHandler.format());
+            if(fHandler.checkIfValidUser(username, password, fHandler.format())){
+                ApplicationFrm app = new ApplicationFrm();
+                app.Show();
+                this.Hide();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -42,6 +46,14 @@ namespace Student_Mangement_Application.Presentation_Layer
             list.Add(new Students(username, password));
 
             fs.WriteToFile(list);
+            ApplicationFrm app = new ApplicationFrm();
+            app.Show();
+            this.Hide();
+        }
+
+        private void LoginFrm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
