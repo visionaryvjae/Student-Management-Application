@@ -53,6 +53,7 @@
             this.btnRegister.TabIndex = 22;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // showPassword
             // 
@@ -63,7 +64,7 @@
             this.showPassword.Size = new System.Drawing.Size(26, 23);
             this.showPassword.TabIndex = 21;
             this.showPassword.UseVisualStyleBackColor = false;
-            this.showPassword.Visible = false;
+            this.showPassword.Click += new System.EventHandler(this.showPassword_Click);
             // 
             // btnLogin
             // 
@@ -76,6 +77,7 @@
             this.btnLogin.TabIndex = 20;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label2
             // 
@@ -102,6 +104,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(140, 23);
             this.txtPassword.TabIndex = 17;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUsername
             // 

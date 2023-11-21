@@ -15,6 +15,7 @@ namespace Student_Mangement_Application.Presentation_Layer
     public partial class LoginFrm : Form
     {
         FileHandler fHandler = new FileHandler();
+        int num = 0;
         public LoginFrm()
         {
             InitializeComponent();
@@ -22,13 +23,7 @@ namespace Student_Mangement_Application.Presentation_Layer
 
         private void LoginRegister_btn_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            if(fHandler.checkIfValidUser(username, password, fHandler.format())){
-                ApplicationFrm app = new ApplicationFrm();
-                app.Show();
-                this.Hide();
-            }
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -37,6 +32,60 @@ namespace Student_Mangement_Application.Presentation_Layer
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LoginFrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showPassword_Click(object sender, EventArgs e)
+        {
+            if (togglePasswordChar(num))
+            {
+                txtPassword.PasswordChar = '\0';
+                num= 0;
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
+            num++;
+        }
+
+        public bool togglePasswordChar(int num)
+        {
+            bool pass = false;
+            pass =  num == 1 ? false : true;
+
+            return pass;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            if (fHandler.checkIfValidUser(username, password, fHandler.format()))
+            {
+                ApplicationFrm app = new ApplicationFrm();
+                app.Show();
+                this.Hide();
+            }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
@@ -49,16 +98,6 @@ namespace Student_Mangement_Application.Presentation_Layer
             ApplicationFrm app = new ApplicationFrm();
             app.Show();
             this.Hide();
-        }
-
-        private void LoginFrm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
