@@ -73,13 +73,27 @@ namespace Student_Mangement_Application.Business_Layer
             connection.Close();
         }
 
-        public DataTable getModuleNum()
+        public List<string> getModuleCodes()
         {
             string query = "SELECT ModuleCode from Modules";
-            SqlDataAdapter da = new SqlDataAdapter(query, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+            List<string> list = new List<string>();
+
+            using (SqlConnection SqlConn = new SqlConnection(conn))
+            {
+                SqlConn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+                cmd.Connection = SqlConn;
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    list.Add(dr[0].ToString());
+                }
+            }
+
+            return list;
         }
     }
 }

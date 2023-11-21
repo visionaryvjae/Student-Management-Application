@@ -18,7 +18,9 @@ namespace Student_Mangement_Application.Presentation_Layer
         {
             InitializeComponent();
             dataGridView1.DataSource = dh.getData().Tables[0];
-            //cmbModuleCodes.DataSource = dh.getModuleNum().ToString();
+            //dataGridView1.DataSource = dh.getModuleCodes();
+            cmbModuleCodes.DataSource = dh.getModuleCodes();
+            cmbModuleCodes.Text = " ";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -85,6 +87,11 @@ namespace Student_Mangement_Application.Presentation_Layer
         {
             dataGridView1.DataSource = dh.getData().Tables[0];
             btnReset.Enabled = false;
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            MessageBox.Show(dataGridView1.CurrentRow.Cells[1].Value.ToString());
         }
     }
 }

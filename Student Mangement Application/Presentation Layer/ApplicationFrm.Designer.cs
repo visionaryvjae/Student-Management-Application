@@ -51,6 +51,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnInformation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(839, 310);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // btnInsert
             // 
@@ -275,11 +277,21 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnInformation
+            // 
+            this.btnInformation.Location = new System.Drawing.Point(12, 12);
+            this.btnInformation.Name = "btnInformation";
+            this.btnInformation.Size = new System.Drawing.Size(45, 38);
+            this.btnInformation.TabIndex = 41;
+            this.btnInformation.Text = "Help";
+            this.btnInformation.UseVisualStyleBackColor = true;
+            // 
             // ApplicationFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1188, 658);
+            this.Controls.Add(this.btnInformation);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -325,5 +337,6 @@
         private Button btnSearch;
         private DateTimePicker birthDatePicker;
         private Button btnReset;
+        private Button btnInformation;
     }
 }
