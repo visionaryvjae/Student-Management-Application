@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationFrm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPreviousFrm = new System.Windows.Forms.Button();
+            this.grbInformationEditor = new System.Windows.Forms.GroupBox();
             this.birthDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbGender = new System.Windows.Forms.ComboBox();
@@ -52,92 +53,111 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnInformation = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grbInformationEditor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(260, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(252, 99);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(839, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(901, 239);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(294, 584);
+            this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(164)))), ((int)(((byte)(242)))));
+            this.btnInsert.FlatAppearance.BorderSize = 0;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsert.Location = new System.Drawing.Point(348, 584);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(134, 44);
             this.btnInsert.TabIndex = 11;
             this.btnInsert.Text = "Insert";
-            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(554, 584);
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(164)))), ((int)(((byte)(242)))));
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(608, 584);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 44);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(788, 584);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(164)))), ((int)(((byte)(242)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(842, 584);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(145, 44);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button4
+            // btnPreviousFrm
             // 
-            this.button4.Location = new System.Drawing.Point(1057, 613);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 33);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Back to Login";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnPreviousFrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(103)))), ((int)(((byte)(137)))));
+            this.btnPreviousFrm.FlatAppearance.BorderSize = 0;
+            this.btnPreviousFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreviousFrm.Location = new System.Drawing.Point(1130, 609);
+            this.btnPreviousFrm.Name = "btnPreviousFrm";
+            this.btnPreviousFrm.Size = new System.Drawing.Size(119, 33);
+            this.btnPreviousFrm.TabIndex = 14;
+            this.btnPreviousFrm.Text = "Back to Login";
+            this.btnPreviousFrm.UseVisualStyleBackColor = false;
+            this.btnPreviousFrm.Click += new System.EventHandler(this.button4_Click);
             // 
-            // groupBox1
+            // grbInformationEditor
             // 
-            this.groupBox1.Controls.Add(this.birthDatePicker);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.cmbGender);
-            this.groupBox1.Controls.Add(this.cmbModuleCodes);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtAddress);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtImage);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtNameSurname);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(106, 372);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1009, 189);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Insert Information";
+            this.grbInformationEditor.Controls.Add(this.birthDatePicker);
+            this.grbInformationEditor.Controls.Add(this.label8);
+            this.grbInformationEditor.Controls.Add(this.cmbGender);
+            this.grbInformationEditor.Controls.Add(this.cmbModuleCodes);
+            this.grbInformationEditor.Controls.Add(this.txtPhone);
+            this.grbInformationEditor.Controls.Add(this.label7);
+            this.grbInformationEditor.Controls.Add(this.label6);
+            this.grbInformationEditor.Controls.Add(this.txtAddress);
+            this.grbInformationEditor.Controls.Add(this.label5);
+            this.grbInformationEditor.Controls.Add(this.label4);
+            this.grbInformationEditor.Controls.Add(this.txtImage);
+            this.grbInformationEditor.Controls.Add(this.label3);
+            this.grbInformationEditor.Controls.Add(this.txtNameSurname);
+            this.grbInformationEditor.Controls.Add(this.label2);
+            this.grbInformationEditor.Location = new System.Drawing.Point(160, 381);
+            this.grbInformationEditor.Name = "grbInformationEditor";
+            this.grbInformationEditor.Size = new System.Drawing.Size(1009, 189);
+            this.grbInformationEditor.TabIndex = 15;
+            this.grbInformationEditor.TabStop = false;
+            this.grbInformationEditor.Text = "Insert Information";
             // 
             // birthDatePicker
             // 
             this.birthDatePicker.Location = new System.Drawing.Point(517, 82);
             this.birthDatePicker.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.birthDatePicker.Name = "birthDatePicker";
-            this.birthDatePicker.Size = new System.Drawing.Size(200, 23);
+            this.birthDatePicker.Size = new System.Drawing.Size(207, 23);
             this.birthDatePicker.TabIndex = 38;
+            this.birthDatePicker.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             // 
             // label8
             // 
@@ -251,52 +271,99 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(60, 226);
+            this.txtSearch.Location = new System.Drawing.Point(25, 142);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(169, 23);
+            this.txtSearch.Size = new System.Drawing.Size(190, 23);
             this.txtSearch.TabIndex = 38;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(75, 255);
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(103)))), ((int)(((byte)(137)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(47, 169);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(134, 25);
+            this.btnSearch.Size = new System.Drawing.Size(144, 22);
             this.btnSearch.TabIndex = 39;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(128)))), ((int)(((byte)(238)))));
             this.btnReset.Enabled = false;
-            this.btnReset.Location = new System.Drawing.Point(75, 286);
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Location = new System.Drawing.Point(252, 344);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(134, 25);
+            this.btnReset.Size = new System.Drawing.Size(128, 25);
             this.btnReset.TabIndex = 40;
-            this.btnReset.Text = "reset database";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Text = "Reset database";
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnInformation
             // 
-            this.btnInformation.Location = new System.Drawing.Point(12, 12);
+            this.btnInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(128)))), ((int)(((byte)(238)))));
+            this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformation.Location = new System.Drawing.Point(1029, 344);
             this.btnInformation.Name = "btnInformation";
-            this.btnInformation.Size = new System.Drawing.Size(45, 38);
+            this.btnInformation.Size = new System.Drawing.Size(124, 25);
             this.btnInformation.TabIndex = 41;
             this.btnInformation.Text = "Help";
-            this.btnInformation.UseVisualStyleBackColor = true;
+            this.btnInformation.UseVisualStyleBackColor = false;
+            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(102, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 102);
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label1.Location = new System.Drawing.Point(198, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 53);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "FBC";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("HP Simplified Hans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(103)))), ((int)(((byte)(137)))));
+            this.label9.Location = new System.Drawing.Point(200, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 17);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Flame Brand College";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ApplicationFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 658);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1259, 652);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnInformation);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.grbInformationEditor);
+            this.Controls.Add(this.btnPreviousFrm);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
@@ -305,8 +372,9 @@
             this.Text = "ApplicationFrm";
             this.Load += new System.EventHandler(this.ApplicationFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbInformationEditor.ResumeLayout(false);
+            this.grbInformationEditor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,8 +386,8 @@
         private Button btnInsert;
         private Button btnUpdate;
         private Button btnDelete;
-        private Button button4;
-        private GroupBox groupBox1;
+        private Button btnPreviousFrm;
+        private GroupBox grbInformationEditor;
         private Label label8;
         private ComboBox cmbGender;
         private ComboBox cmbModuleCodes;
@@ -338,5 +406,8 @@
         private DateTimePicker birthDatePicker;
         private Button btnReset;
         private Button btnInformation;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Label label9;
     }
 }

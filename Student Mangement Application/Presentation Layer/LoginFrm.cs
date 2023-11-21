@@ -55,5 +55,10 @@ namespace Student_Mangement_Application.Presentation_Layer
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
