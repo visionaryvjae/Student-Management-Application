@@ -15,13 +15,14 @@ namespace Student_Mangement_Application.Presentation_Layer
     public partial class ApplicationFrm : Form
     {
         DataHandler dh = new DataHandler();
+        bool pressed = false;
         public ApplicationFrm()
         {
             InitializeComponent();
+            //retrieve datatset with our databse tables from DataHandler
             dataGridView1.DataSource = dh.getData().Tables[0];
-            //dataGridView1.DataSource = dh.getModuleCodes();
+            //adding all existing Module Codes from Modules tbl into ModuleCodes combobox list
             cmbModuleCodes.DataSource = dh.getModuleCodes();
-            cmbModuleCodes.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -97,11 +98,13 @@ namespace Student_Mangement_Application.Presentation_Layer
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = dh.getData().Tables[0];
+            txtSearch.Clear();
             btnReset.Enabled = false;
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            //extract selected row information into the respective inputs
             txtNameSurname.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtImage.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             birthDatePicker.Value = (DateTime)dataGridView1.CurrentRow.Cells[3].Value;
@@ -115,6 +118,26 @@ namespace Student_Mangement_Application.Presentation_Layer
         private void btnInformation_Click(object sender, EventArgs e)
         {
             MessageBox.Show("To update records please double click on the row of data that you would like to edit and make your changes in the provided input boxes.", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (!pressed)
+            {
+                dataGridView1.DataSource = dh.getData().Tables[1];
+                grbInformationEditor.Enabled = false;
+                btnSearch.Enabled = false;
+                btnDelete.Enabled = false;
+                pressed = true;
+            }
+            else
+            {
+                dataGridView1.DataSource = dh.getData().Tables[0];
+                grbInformationEditor.Enabled = true;
+                btnSearch.Enabled = true;
+                btnDelete.Enabled = true;
+                pressed = false;
+            }
         }
     }
 }

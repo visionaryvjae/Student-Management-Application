@@ -56,6 +56,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grbInformationEditor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -216,6 +217,7 @@
             // 
             this.txtAddress.Location = new System.Drawing.Point(834, 80);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PlaceholderText = "e.g 67 Dairy Lane Avenue";
             this.txtAddress.Size = new System.Drawing.Size(159, 23);
             this.txtAddress.TabIndex = 31;
             // 
@@ -241,6 +243,7 @@
             // 
             this.txtImage.Location = new System.Drawing.Point(517, 39);
             this.txtImage.Name = "txtImage";
+            this.txtImage.PlaceholderText = "e.g image URL";
             this.txtImage.Size = new System.Drawing.Size(159, 23);
             this.txtImage.TabIndex = 27;
             // 
@@ -257,6 +260,7 @@
             // 
             this.txtNameSurname.Location = new System.Drawing.Point(201, 42);
             this.txtNameSurname.Name = "txtNameSurname";
+            this.txtNameSurname.PlaceholderText = "e.g Jacob James";
             this.txtNameSurname.Size = new System.Drawing.Size(159, 23);
             this.txtNameSurname.TabIndex = 25;
             // 
@@ -273,6 +277,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(25, 142);
             this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Please enter name of student";
             this.txtSearch.Size = new System.Drawing.Size(190, 23);
             this.txtSearch.TabIndex = 38;
             // 
@@ -348,6 +353,18 @@
             this.label9.Text = "Flame Brand College";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(128)))), ((int)(((byte)(238)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(396, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 25);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "View Modules Table";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // ApplicationFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -355,6 +372,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1259, 652);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -409,5 +427,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label9;
+        private Button button1;
     }
 }
